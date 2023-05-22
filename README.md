@@ -6,5 +6,6 @@ Repositorio referente a primeira entrega do trabalho de Orientação a Objetos -
 
 
 Alunos : 
-João Pedro Costa Matrícula: 190030801\n
+João Pedro Costa Matrícula: 190030801
+
 Daniel Nunes  Daurte: 211062910
