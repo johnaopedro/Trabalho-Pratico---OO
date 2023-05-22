@@ -9,4 +9,4 @@ Alunos :
 
 João Pedro Costa Matrícula: 190030801
 
-Daniel Nunes  Daurte: 211062910
+Daniel Nunes  Daurte Matrícula: 211062910
