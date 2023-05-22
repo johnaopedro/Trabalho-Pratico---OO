@@ -1,4 +1,4 @@
-# Trabalho-Pratico---OO
+# Trabalho Pratico OO
 
 Repositorio referente a primeira entrega do trabalho e Orientação a Objetos - FGA0158
 
