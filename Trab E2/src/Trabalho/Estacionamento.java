@@ -28,7 +28,21 @@ public class Estacionamento {
 		}
 
 	public String TempoTotal() {
-		String HF = (HoraAberturaHora-HoraAberturaSaidaHora)+":"+(HoraAberturaMinuto-HoraAberturaSaidaMinuto);
+		int hora=0;
+		int hora2=0;
+		int horatotal=0;
+		int horafinaltotal=0;
+		int final1=0;
+		while(HoraAberturaHora!=0){
+			HoraAberturaHora--;
+			hora=hora+60;
+		}while(HoraAberturaSaidaHora!=0){
+			HoraAberturaSaidaHora--;
+			hora2=hora2+60;
+		}horatotal= hora+HoraAberturaMinuto;
+		horafinaltotal=hora2+HoraAberturaSaidaMinuto;
+		final1= horatotal-horafinaltotal;
+		String HF = (final1/60)+":"+(final1%60);
 		return HF;}
 		
 	public int TotalHorasHora(int HoraAberturaHora) {
