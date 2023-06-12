@@ -12,7 +12,7 @@ public class Valor {
 	private Estacionamento Lucro;
 	
 	public Estacionamento contratantereturn() {
-		return Lucro;
+		return Lucro/100;
 	}
 	
 	public float Testarhoravalor(){
