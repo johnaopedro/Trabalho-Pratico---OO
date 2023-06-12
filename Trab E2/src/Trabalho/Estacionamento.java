@@ -1,7 +1,6 @@
 package Trabalho;
 
 public class Estacionamento {
-	private String Hora;
 	private int NumerodeAcessos;
 	private int capacidade;
 	float Lucro;
@@ -14,65 +13,44 @@ public class Estacionamento {
 	private int TempoTotalEstacionamentoMinuto;
 	
 	public Estacionamento() {}
-	public Estacionamento(String Hora, int NumerodeAcessos, int capacidade, float Lucro, float ValorDoContratante, int HoraAberturaHora, int HoraAberturaMinuto, int HoraAberturaSaidaHora, int HoraAberturaSaidaMinuto, int TempoTotalEstacionamentoHora, int TempoTotalEstacionamentoMinuto) {
-		this.Hora = Hora;
+	public Estacionamento(int NumerodeAcessos, int capacidade, float Lucro, float ValorDoContratante, int HoraAberturaHora, int HoraAberturaMinuto, int HoraAberturaSaidaHora, int HoraAberturaSaidaMinuto, int TempoTotalEstacionamentoHora, int TempoTotalEstacionamentoMinuto) {
 		this.NumerodeAcessos = NumerodeAcessos;
 		this.capacidade = capacidade;
 		this.Lucro = Lucro;
 		this.ValorDoContratante = ValorDoContratante;
-		this.HoraAberturaHora = TotalHorasHora();
-		this.HoraAberturaMinuto = TotalHorasMinuto();
-		this.HoraAberturaSaidaHora = TotalHorasHoraSaida();
-		this.HoraAberturaSaidaMinuto = TotalHorasMinutoSaida();
+		this.HoraAberturaHora = HoraAberturaHora ;
+		this.HoraAberturaMinuto = HoraAberturaMinuto;
+		this.HoraAberturaSaidaHora = HoraAberturaSaidaHora;
+		this.HoraAberturaSaidaMinuto = HoraAberturaSaidaMinuto;
 		this.TempoTotalEstacionamentoHora = TempoTotalEstacionamentoHora;
 		this.TempoTotalEstacionamentoMinuto = TempoTotalEstacionamentoMinuto;
 
 		}
-	
-	public int Computarcapacidade() {
+
+	public String TempoTotal() {
+		String HF = (HoraAberturaHora-HoraAberturaSaidaHora)+":"+(HoraAberturaMinuto-HoraAberturaSaidaMinuto);
+		return HF;}
 		
-		
+	public int TotalHorasHora(int HoraAberturaHora) {
+		if(HoraAberturaHora>24 ||HoraAberturaHora<0) {
+			System.out.println("Hora Invalida");
+	} else {this.HoraAberturaHora=HoraAberturaHora;
+	System.out.println("Hora Registrada");}
+		return HoraAberturaHora;
 	}
-	public String ImprimirExcessao() {
-		
-		
-	}
-	public String Imprimir() {
-	
-	
-}
-	public float ComputarValoreAcesso() {
-		
-		
-	}
-	public int RegistrarCadastro() {
-		
-		
-	}
-	public int TotalHorasHora() {
-		
-		
-	}
-	public int TotalHorasMinuto() {
-	
-	
-	}
-	public int TotalHorasHoraSaida() {
-		
-		
-	}
-	public int TotalHorasMinutoSaida() {
-	
+	public int TotalHorasMinuto(int HoraAberturaMinuto) {
+		if(HoraAberturaMinuto>60 ||HoraAberturaMinuto<0) {
+			System.out.println("Minuto Invalido");
+	} else {this.HoraAberturaMinuto= HoraAberturaMinuto;
+	System.out.println("Minuto Registrada");}
+		return HoraAberturaMinuto;
 	
 	}
 	public String StringHorario() {
-		
+		String Hora = HoraAberturaHora+":"+HoraAberturaMinuto;
+		return Hora;
 		
 	}
-	public int IdentificarEstacionamentoSelecionado() {
-	
-	
-}
 	public int getNumerodeAcessos() {
 		return NumerodeAcessos;
 	}
@@ -103,22 +81,6 @@ public class Estacionamento {
 	
 	public void setValorDoContratante(float ValorDoContratante) {
 		this.ValorDoContratante = ValorDoContratante;
-	}
-	
-	public int getHoraAberturaHora() {
-		return HoraAberturaHora;
-	}
-	
-	public void setHoraAberturaHora(int HoraAberturaHora) {
-		this.HoraAberturaHora = HoraAberturaHora;
-	}
-	
-	public int getHoraAberturaMinuto() {
-		return HoraAberturaMinuto;
-	}
-	
-	public void setHoraAberturaMinuto(int HoraAberturaMinuto) {
-		this.HoraAberturaMinuto = HoraAberturaMinuto;
 	}
 
 	public int getHoraAberturaSaidaHora() {
